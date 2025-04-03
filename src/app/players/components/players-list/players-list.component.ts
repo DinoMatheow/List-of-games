@@ -10,6 +10,6 @@ import { InfoPlayers } from '../../interfaces/info-players.interface';
 })
 export class PlayersListComponent {
 
- infoPlayer = input<InfoPlayers | null>(null);
+ infoPlayer = input<InfoPlayers[]>([]);
   players = input<IDNamePlayers[]>([]);
 }

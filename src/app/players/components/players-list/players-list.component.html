@@ -16,9 +16,9 @@
           <tr>
             <td>{{ i + 1 }}</td>
             <td>{{ player.gameName }}#{{ player.tagLine }}</td>
-            <td> -- </td> <!-- Placeholder para Build -->
-            <td> -- </td> <!-- Placeholder para Score -->
-            <td>{{ infoPlayer()?.summonerLevel ?? 'N/A' }}</td> <!-- Se usa "??" para manejar null -->
+            <td> -- </td>
+            <td> -- </td>
+            <td>{{ infoPlayer()[1]?.leaguePoints}}</td>
           </tr>
         }
       </tbody>

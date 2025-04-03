@@ -4,7 +4,7 @@ import { IDNamePlayers } from '../interfaces/idName-players.interface';
 import { InfoPlayers } from '../interfaces/info-players.interface';
 
 const API_URL = 'https://americas.api.riotgames.com/riot/account/v1';
-const API_URL_INFO = 'https://la1.api.riotgames.com/lol/summoner/v4';
+const API_URL_INFO = 'https://la1.api.riotgames.com/lol/league/v4';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ const API_URL_INFO = 'https://la1.api.riotgames.com/lol/summoner/v4';
 export class PlayersService {
 
 private http = inject(HttpClient);
-private API_KEY = 'RGAPI-1b2347f5-1038-41e3-bf15-b82a601d0c1c';
+private API_KEY = 'RGAPI-384f09f8-b025-4c6d-a41f-bfc750a5b005';
 
 
 searchPlayers(query: string) {
@@ -29,7 +29,7 @@ searchPlayers(query: string) {
 }
 
 getInfoPlayer(puuid: string) {
-  return this.http.get<InfoPlayers>(`${API_URL_INFO}/summoners/by-puuid/${puuid}?api_key=${this.API_KEY}`);
+  return this.http.get<InfoPlayers[]>(`${API_URL_INFO}/entries/by-puuid/${puuid}?api_key=${this.API_KEY}`);
 }
 
 

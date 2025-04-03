@@ -18,7 +18,7 @@ export class ByDeathsComponent {
     isLoading = signal(false);
     isError = signal<string | null>(null);
     players = signal<IDNamePlayers[]>([]);
-    infoPlayer = signal<InfoPlayers | null>(null);
+    infoPlayer = signal<InfoPlayers[]>([]);
 
 
     onSearch(query: string) {
