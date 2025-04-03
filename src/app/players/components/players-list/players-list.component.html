@@ -8,16 +8,20 @@
           <th>Name</th>
           <th>Build</th>
           <th>Score</th>
-          <th></th>
+          <th>Level</th>
         </tr>
       </thead>
-     <tbody>
-      <tr>
-
-      </tr>
-     </tbody>
-
-
+      <tbody>
+        @for (player of players(); track player.puuid; let i = $index) {
+          <tr>
+            <td>{{ i + 1 }}</td>
+            <td>{{ player.gameName }}#{{ player.tagLine }}</td>
+            <td> -- </td> <!-- Placeholder para Build -->
+            <td> -- </td> <!-- Placeholder para Score -->
+            <td>{{ infoPlayer()?.summonerLevel ?? 'N/A' }}</td> <!-- Se usa "??" para manejar null -->
+          </tr>
+        }
+      </tbody>
     </table>
   </div>
 </section>

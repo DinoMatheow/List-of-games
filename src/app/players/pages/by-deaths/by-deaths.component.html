@@ -1,6 +1,6 @@
-<search-input></search-input>
+<search-input  (value)="onSearch($event)"></search-input>
 
 
-<players-list></players-list>
+<players-list  [players]="players()" [infoPlayer]="infoPlayer()"></players-list>
 
 

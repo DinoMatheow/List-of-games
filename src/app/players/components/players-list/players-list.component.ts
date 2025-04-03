@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { IDNamePlayers } from '../../interfaces/idName-players.interface';
+import { InfoPlayers } from '../../interfaces/info-players.interface';
 @Component({
   selector: 'players-list',
   standalone: true,
@@ -7,4 +8,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './players-list.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PlayersListComponent { }
+export class PlayersListComponent {
+
+ infoPlayer = input<InfoPlayers | null>(null);
+  players = input<IDNamePlayers[]>([]);
+}
