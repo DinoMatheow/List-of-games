@@ -14,14 +14,50 @@
       <tbody>
         @for (player of players(); track player.puuid; let i = $index) {
           <tr>
+            <!--row 1-->
             <td>{{ i + 1 }}</td>
-            <td>{{ player.gameName }}#{{ player.tagLine }}</td>
+            <td>
+              <div class="flex items-center gap-3">
+                <div class="avatar flex flex-col items-center">
+                  <div class="mask mask-squircle h-12 w-12">
+                   <!-- <img> -->
+                   <img [src]="'https://ddragon.leagueoflegends.com/cdn/14.7.1/img/profileicon/' + imgLevelPlayer()?.profileIconId + '.png'"
+                   alt="profile icon"
+                   class="w-12 h-12"/>
+                  </div>
+                  <span class="badge badge-sm badge-primary"> {{imgLevelPlayer()?.summonerLevel}}</span>
+
+                </div>
+                <!-- name player -->
+              <div>
+                    <div class="font-bold">  {{ player.gameName }}#{{ player.tagLine }} </div>
+                    <div class="text-sm opacity-50">El 10 de la calle</div>
+              </div>
+              <!-- info player -->
+              <div>
+
+                <div  class="badge badge-ghost badge-sm">
+                  {{infoPlayer()[0].tier ?? infoPlayer()[1].tier}}
+                  -> {{infoPlayer()[0].rank ?? infoPlayer()[1].rank}}
+                  LP:{{infoPlayer()[0].leaguePoints ?? infoPlayer()[1].leaguePoints}}
+                </div>
+                <div class="text-sm opacity-50 flex gap-2">
+                  <span class="text-success">Wins: {{infoPlayer()[0].wins ?? infoPlayer()[1].wins}}</span>
+                  <span class="text-danger">Losses: {{infoPlayer()[0].losses ?? infoPlayer()[1].losses}}</span>
+                </div>
+              </div>
+
+              </div>
+            </td>
+            <!--row 2-->
             <td> -- </td>
-            <td> -- </td>
-            <td>{{ infoPlayer()[1]?.leaguePoints}}</td>
+            <td>--</td>
+            <td>{{  infoPlayer().length > 1 ? infoPlayer()[0].leaguePoints : ''}}</td>
           </tr>
         }
       </tbody>
     </table>
   </div>
 </section>
+
+
