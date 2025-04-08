@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-navbar',
   standalone: true,
   imports: [],
-  templateUrl: './header.component.html',
+  templateUrl: './navbar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent { }
+export class NavbarComponent { }
