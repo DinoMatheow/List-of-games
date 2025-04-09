@@ -2,15 +2,7 @@
   <div class="overflow-x-auto">
     <table class="table table-md mt-2 w-full">
       <!-- head -->
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Build</th>
-          <th>Score</th>
-          <th>Level</th>
-        </tr>
-      </thead>
+
       <tbody>
         @for (player of players(); track player.puuid; let i = $index) {
           <tr>
@@ -49,10 +41,10 @@
 
               </div>
             </td>
-            <!--row 2-->
+            <!-- row 2
             <td> -- </td>
             <td>--</td>
-            <td>{{  infoPlayer().length > 1 ? infoPlayer()[0].leaguePoints : ''}}</td>
+            <td>{{  infoPlayer().length > 1 ? infoPlayer()[0].leaguePoints : ''}}</td> -->
           </tr>
         }
       </tbody>
