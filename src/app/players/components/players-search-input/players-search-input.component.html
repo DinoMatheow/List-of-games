@@ -1,9 +1,14 @@
-<section class="flex flex-row gap-2 mt-2">
-  <input type="text"
-  class="input input-bordered w-full max-w-xs"
+<section class="flex flex-row gap-2 mt-2 w-full justify-center" >
+  <input
+  type="text"
+  class="input input-bordered w-full max-w-5xl"
   [placeholder]="placeholder()"
   #txtSearch
   (keyup.enter)="value.emit(txtSearch.value)"
-  />
+/>
+
   <button class="btn btn-primary" (click)="value.emit(txtSearch.value)">Search</button>
 </section>
+
+
+
