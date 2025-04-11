@@ -24,18 +24,19 @@
               <div>
                     <div class="font-bold">  {{ player.gameName }}#{{ player.tagLine }} </div>
                     <div class="text-sm opacity-50">El 10 de la calle</div>
+                    <div class="badge badge-neutral badge-sm self-start px-3 py-2 whitespace-nowrap">
+                      <!--tier and rank-->
+                      {{ infoPlayer()[0].tier ?? infoPlayer()[1].tier }}
+                      -> {{ infoPlayer()[0].rank ?? infoPlayer()[1].rank }}
+                      · LP: {{ infoPlayer()[0].leaguePoints ?? infoPlayer()[1].leaguePoints }}
+                    </div>
               </div>
               <!-- info player -->
               <div>
-
-                <div  class="badge badge-ghost badge-sm">
-                  {{infoPlayer()[0].tier ?? infoPlayer()[1].tier}}
-                  -> {{infoPlayer()[0].rank ?? infoPlayer()[1].rank}}
-                  LP:{{infoPlayer()[0].leaguePoints ?? infoPlayer()[1].leaguePoints}}
-                </div>
-                <div class="text-sm opacity-50 flex gap-2">
-                  <span class="text-success">Wins: {{infoPlayer()[0].wins ?? infoPlayer()[1].wins}}</span>
-                  <span class="text-danger">Losses: {{infoPlayer()[0].losses ?? infoPlayer()[1].losses}}</span>
+                <!--wins and losses-->
+                <div class="flex flex-col gap-2 opacity-80">
+                  <span class="badge badge-accent">Wins: {{ infoPlayer()[0].wins ?? infoPlayer()[1].wins }}</span>
+                  <span class="badge badge-error">Losses: {{ infoPlayer()[0].losses ?? infoPlayer()[1].losses }}</span>
                 </div>
               </div>
 
