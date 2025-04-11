@@ -14,7 +14,7 @@ const API_URL_IMG_LEVEL = 'https://la1.api.riotgames.com/lol/summoner/v4';
 export class PlayersService {
 
 private http = inject(HttpClient);
-private API_KEY = 'RGAPI-db9dfbc2-4b53-46b2-a81f-e378165eb694';
+private API_KEY = 'RGAPI-da0c4888-626b-411f-b76a-757e138a8153';
 
 
 searchPlayers(query: string) {
