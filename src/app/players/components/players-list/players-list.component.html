@@ -24,7 +24,7 @@
               <div>
                     <div class="font-bold">  {{ player.gameName }}#{{ player.tagLine }} </div>
                     <div class="text-sm opacity-50">El 10 de la calle</div>
-                    <div class="badge badge-neutral badge-sm self-start px-3 py-2 whitespace-nowrap">
+                    <div class="badge badge-neutral badge-sm self-start px-3 py-2 whitespace-nowrap" [ngClass]="getTierBadgeClass()">
                       <!--tier and rank-->
                       {{ infoPlayer()[0].tier ?? infoPlayer()[1].tier }}
                       -> {{ infoPlayer()[0].rank ?? infoPlayer()[1].rank }}
