@@ -1,18 +1,38 @@
-<div class="navbar bg-base-100 shadow-sm">
+<div class="navbar bg-base-200 shadow-sm">
   <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
-      </div>
-      <ul
-        tabindex="0"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a routerLink="characters" routerLinkActive="btn-primary">Homepage</a></li>
-        <li><a>Portfolio</a></li>
-        <li><a>About</a></li>
-      </ul>
-    </div>
+    <ul class="menu menu-horizontal px-1 space-x-2">
+      <li>
+        <a
+          routerLink="home-menu"
+          routerLinkActive="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 text-white"
+          class="rounded-lg px-4 py-2 transition-all duration-300 hover:bg-base-200"
+        >
+        <i class="fas fa-house mr-2">Home</i>
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="create-podium"
+          routerLinkActive="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 text-white"
+          class="rounded-lg px-4 py-2 transition-all duration-300 hover:bg-base-200"
+        >
+        <i class="fas fa-trophy mr-2"></i>Create Podium
+
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="by-kills"
+          routerLinkActive="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 text-white"
+          class="rounded-lg px-4 py-2 transition-all duration-300 hover:bg-base-200"
+        >
+        <i class="fas fa-circle-info mr-2"></i>About Project
+
+        </a>
+      </li>
+    </ul>
   </div>
+
   <div class="navbar-center">
      <a routerLink="characters" routerLinkActive="btn-primary" class="btn btn-ghost text-xl font-bold">GG Game</a>
   </div>
