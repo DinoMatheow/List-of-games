@@ -9,7 +9,7 @@
             <!--row 1-->
             <td>{{ i + 1 }}</td>
             <td>
-              <div class="flex items-center gap-3">
+              <div class="flex items-center gap-2">
                 <div class="avatar flex flex-col items-center">
                   <div class="mask mask-squircle h-12 w-12">
                    <!-- <img> -->
@@ -35,8 +35,8 @@
               <div>
                 <!--wins and losses-->
                 <div class="flex flex-col gap-2 opacity-80">
-                  <span class="badge badge-accent">Wins: {{ infoPlayer()[0].wins ?? infoPlayer()[1].wins }}</span>
-                  <span class="badge badge-error">Losses: {{ infoPlayer()[0].losses ?? infoPlayer()[1].losses }}</span>
+                  <span class="badge badge-accent whitespace-nowrap">Wins: {{ infoPlayer()[0].wins ?? infoPlayer()[1].wins }}</span>
+                  <span class="badge badge-error whitespace-nowrap">Losses: {{ infoPlayer()[0].losses ?? infoPlayer()[1].losses }}</span>
                 </div>
               </div>
 
