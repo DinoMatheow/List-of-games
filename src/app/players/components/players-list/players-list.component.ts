@@ -16,9 +16,13 @@ export class PlayersListComponent {
   players = input<IDNamePlayers[]>([]);
   imgLevelPlayer = input<ImgLevel>();
 
+  get playerInfo(): InfoPlayers {
+    return this.infoPlayer()[0] || this.infoPlayer()[1] || {};
+  }
+
   getTierBadgeClass(): string {
     // Convierte el valor de 'tier' a minúsculas
-    const tier = (this.infoPlayer()[0]?.tier ?? this.infoPlayer()[1]?.tier)?.toLowerCase();
+    const tier = this.playerInfo.tier?.toLowerCase();
 
     console.log('Tier:', tier);  // Verifica el valor del tier
 
