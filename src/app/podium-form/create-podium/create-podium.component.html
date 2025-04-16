@@ -1,0 +1,69 @@
+<div class="card bg-base-100 shadow-xl p-6 gap-4">
+
+
+  <form autocomplete="off" [formGroup]="myForm" (ngSubmit)="onSave()">
+
+    <!-- Campo: Name -->
+    <div class="mb-4">
+      <label class="label">
+        <span class="label-text text-lg font-semibold">Name :   </span>
+      </label>
+      <input type="text"
+             class="input input-bordered w-full bg-neutral text-neutral-content"
+             placeholder="Name of the podium"
+             formControlName="name" />
+      @if (formUtils.isValidField(myForm, 'name')) {
+        <span class="text-error text-sm mt-1 block">
+          {{ formUtils.getFieldError(myForm, 'name') }}
+        </span>
+      }
+    </div>
+
+    <!-- Opciones -->
+<!-- Opciones -->
+<div class="mb-6">
+  <div class="flex flex-wrap gap-4">
+    <label class="label">
+      <span class="label-text text-lg font-semibold">Options : </span>
+    </label>
+
+    <label class="flex items-center gap-2 bg-base-200 rounded-md px-3 py-2 hover:bg-base-300 transition cursor-pointer">
+      <input type="checkbox" class="checkbox checkbox-primary" formControlName="termAndConditions" />
+      <span class="label-text text-sm">By OP.GG</span>
+    </label>
+
+    <label class="flex items-center gap-2 bg-base-200 rounded-md px-3 py-2 hover:bg-base-300 transition cursor-pointer">
+      <input type="checkbox" class="checkbox checkbox-secondary" formControlName="termAndConditions" />
+      <span class="label-text text-sm">By Kill</span>
+    </label>
+
+    <label class="flex items-center gap-2 bg-base-200 rounded-md px-3  transition cursor-pointer">
+      <input type="checkbox" class="checkbox checkbox-accent" formControlName="termAndConditions" />
+      <span class="label-text text-sm">By Deaths</span>
+    </label>
+
+  </div>
+
+  @if (formUtils.isValidField(myForm, 'termAndConditions')) {
+    <span class="text-error text-sm mt-2 block">
+      Choose at least one option
+    </span>
+  }
+
+<div>
+  <span class="label-text text-lg font-semibold">Add players : </span>
+</div>
+
+
+</div>
+
+
+    <!-- Botón -->
+    <div class="mt-6">
+      <button type="submit" class="btn btn-primary ">
+        Save
+      </button>
+    </div>
+
+  </form>
+</div>

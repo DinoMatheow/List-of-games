@@ -14,7 +14,7 @@ const API_URL_IMG_LEVEL = 'https://la1.api.riotgames.com/lol/summoner/v4';
 export class PlayersService {
 
 private http = inject(HttpClient);
-private API_KEY = 'RGAPI-da0c4888-626b-411f-b76a-757e138a8153';
+private API_KEY = 'RGAPI-bad562da-f793-4339-89e6-e64f2e08b33d';
 
 
 searchPlayers(query: string) {
@@ -24,6 +24,7 @@ searchPlayers(query: string) {
 
   if (!gameName || !tagLine) {
     throw new Error('Formato incorrecto. Usa "Nombre#TAG"');
+
   }
 
   return this.http.get<IDNamePlayers[]>(`${API_URL}/accounts/by-riot-id/${gameName}/${tagLine}?api_key=${this.API_KEY}`);
