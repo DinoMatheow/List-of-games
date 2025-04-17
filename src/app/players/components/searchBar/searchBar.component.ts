@@ -1,19 +1,21 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal, input } from '@angular/core';
 import { SearchInputComponent } from '../../components/players-search-input/players-search-input.component';
 import { PlayersListComponent } from '../../components/players-list/players-list.component';
+import { PodiumListComponent } from '../../components/podium-list/podium-list.component';
 
 // services
 import { PlayersService } from '../../services/players.service';
 
 // interfaces
-import { IDNamePlayers } from '../../interfaces/idName-players.interface';
-import { InfoPlayers } from '../../interfaces/info-players.interface';
-import { ImgLevel } from '../../interfaces/img-level-player.interface';
-
+import { IDNamePlayers } from '../../interfaces/player-info/idName-players.interface';
+import { InfoPlayers } from '../../interfaces/player-info/info-players.interface';
+import { ImgLevel } from '../../interfaces/player-info/img-level-player.interface';
+import { MatchIdList } from '../../interfaces/matchs-info/match-id-.interdace';
+import { MatchInfo } from '../../interfaces/matchs-info/match-info.interface';
 @Component({
   selector: 'search-bar',
   standalone: true,
-  imports: [SearchInputComponent, PlayersListComponent],
+  imports: [SearchInputComponent, PlayersListComponent, PodiumListComponent],
   templateUrl: './searchBar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -22,9 +24,15 @@ export class SearchBarComponent {
 
     isLoading = signal(false);
     isError = signal<string | null>(null);
+
     players = signal<IDNamePlayers[]>([]);
     infoPlayer = signal<InfoPlayers[]>([]);
     imgLevelPlayer = signal<ImgLevel | null>(null);
+    matchIds = signal<string[]>([]);
+    matchInfo = signal<MatchInfo | null>(null);
+
+
+
 
     onSearch(query: string) {
       console.log('search player', query);
@@ -37,26 +45,6 @@ export class SearchBarComponent {
       this.playersService.searchPlayers(query)
           .subscribe((players) => {
               this.isLoading.set(false);
-
-              // verify that players is not null
-              // if (!players) {
-              //     console.error("La API devolvió un valor vacío o nulo.", players);
-              //     this.isError.set("No se encontraron jugadores.");
-              //     return;
-              // }
-
-              // if players is an  empty array then there are no players
-              // if (Array.isArray(players) && players.length === 0) {
-              //     console.error("No se encontraron jugadores en el array.", players);
-              //     this.isError.set("No se encontraron jugadores.");
-              //     return;
-              // }
-
-              // if (!playersArray[0]?.puuid) {
-              //     console.error("El jugador no tiene 'puuid'.", playersArray);
-              //     this.isError.set("Error al obtener el ID del jugador.");
-              //     return;
-              // }
 
               const playersArray = Array.isArray(players) ? players : [players];
 
@@ -75,6 +63,14 @@ export class SearchBarComponent {
                       console.log('imgLevel', imgLevel);
                       this.imgLevelPlayer.set(imgLevel);
                   });
+              this.playersService.getMatchId(playersArray[0].puuid)
+                  .subscribe((matchIds) => {
+                      console.log('matchIds', matchIds);
+                      this.matchIds.set(matchIds);
+                  });
+
+
+
           });
   }
 

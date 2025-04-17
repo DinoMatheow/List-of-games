@@ -1,12 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { IDNamePlayers } from '../interfaces/idName-players.interface';
-import { InfoPlayers } from '../interfaces/info-players.interface';
-import { ImgLevel } from '../interfaces/img-level-player.interface';
-
+//Interfaces
+import { IDNamePlayers } from '../interfaces/player-info/idName-players.interface';
+import { InfoPlayers } from '../interfaces/player-info/info-players.interface';
+import { ImgLevel } from '../interfaces/player-info/img-level-player.interface';
+import { MatchIdList } from '../interfaces/matchs-info/match-id-.interdace';
+import { MatchInfo } from '../interfaces/matchs-info/match-info.interface';
+//APIS
 const API_URL = 'https://americas.api.riotgames.com/riot/account/v1';
 const API_URL_INFO = 'https://la1.api.riotgames.com/lol/league/v4';
 const API_URL_IMG_LEVEL = 'https://la1.api.riotgames.com/lol/summoner/v4';
+const API_URL_MATCH_ID = 'https://americas.api.riotgames.com/lol/match/v5';
+const API_URL_INFO_MATCH = 'https://americas.api.riotgames.com/lol/match/v5';
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +20,7 @@ const API_URL_IMG_LEVEL = 'https://la1.api.riotgames.com/lol/summoner/v4';
 export class PlayersService {
 
 private http = inject(HttpClient);
-private API_KEY = 'RGAPI-bad562da-f793-4339-89e6-e64f2e08b33d';
+private API_KEY = 'RGAPI-93cfd21f-850c-4c89-ab43-e63c2940c34e';
 
 
 searchPlayers(query: string) {
@@ -37,6 +43,14 @@ getInfoPlayer(puuid: string) {
 
 getImgLevelPlayer(puuid: string) {
   return this.http.get<ImgLevel>(`${API_URL_IMG_LEVEL}/summoners/by-puuid/${puuid}?api_key=${this.API_KEY}`);
+}
+
+getMatchId(puuid: string) {
+  return this.http.get<string[]>(`${API_URL_MATCH_ID}/matches/by-puuid/${puuid}/ids?start=0&count=5&api_key=${this.API_KEY}`);
+}
+
+getInfoMatch(matchId: string) {
+  return this.http.get<MatchInfo>(`${API_URL_INFO_MATCH}/matches/${matchId}?api_key=${this.API_KEY}`);
 }
 
 

@@ -1,6 +1,19 @@
-<search-input  (value)="onSearch($event)"></search-input>
+<div class="flex flex-col gap-4">
+  <search-input (value)="onSearch($event)"></search-input>
 
+  @if (isLoading()) {
+    <div class="flex justify-center items-center h-64">
+      <span class="loading loading-spinner loading-lg"></span>
+    </div>
+  } @else {
+    <players-list
+      [players]="players()"
+      [infoPlayer]="infoPlayer()"
+      [imgLevelPlayer]="imgLevelPlayer() ?? undefined">
+    </players-list>
 
-<players-list  [players]="players()" [infoPlayer]="infoPlayer()" [imgLevelPlayer]="imgLevelPlayer() ?? undefined"></players-list>
+    <app-podium-list [matchIds]="matchIds()"></app-podium-list>
+  }
+</div>
 
 

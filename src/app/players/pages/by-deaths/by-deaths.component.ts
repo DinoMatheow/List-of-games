@@ -6,9 +6,9 @@ import { PlayersListComponent } from '../../components/players-list/players-list
 import { PlayersService } from '../../services/players.service';
 
 // interfaces
-import { IDNamePlayers } from '../../interfaces/idName-players.interface';
-import { InfoPlayers } from '../../interfaces/info-players.interface';
-import { ImgLevel } from '../../interfaces/img-level-player.interface';
+import { IDNamePlayers } from '../../interfaces/player-info/idName-players.interface';
+import { InfoPlayers } from '../../interfaces/player-info/info-players.interface';
+import { ImgLevel } from '../../interfaces/player-info/img-level-player.interface';
 @Component({
   selector: 'app-by-deaths',
   standalone: true,

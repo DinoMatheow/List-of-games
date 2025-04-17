@@ -1,8 +1,11 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { IDNamePlayers } from '../../interfaces/idName-players.interface';
-import { InfoPlayers } from '../../interfaces/info-players.interface';
-import { ImgLevel } from '../../interfaces/img-level-player.interface';
+import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
+import { IDNamePlayers } from '../../interfaces/player-info/idName-players.interface';
+import { InfoPlayers } from '../../interfaces/player-info/info-players.interface';
+import { ImgLevel } from '../../interfaces/player-info/img-level-player.interface';
 import { CommonModule } from '@angular/common';
+import { LoadingComponent } from '../../../shared/components/loading/loading.component';
+import { MatchIdList } from '../../interfaces/matchs-info/match-id-.interdace';
+import { MatchInfo } from '../../interfaces/matchs-info/match-info.interface';
 
 @Component({
   selector: 'players-list',
@@ -16,16 +19,14 @@ export class PlayersListComponent {
   players = input<IDNamePlayers[]>([]);
   imgLevelPlayer = input<ImgLevel>();
 
+
+
   get playerInfo(): InfoPlayers {
     return this.infoPlayer()[0] || this.infoPlayer()[1] || {};
   }
 
   getTierBadgeClass(): string {
-    // Convierte el valor de 'tier' a minúsculas
     const tier = this.playerInfo.tier?.toLowerCase();
-
-    console.log('Tier:', tier);  // Verifica el valor del tier
-
     switch (tier) {
       case 'iron': return 'badge badge-secondary';
       case 'bronze': return 'badge badge-warning';
@@ -41,5 +42,4 @@ export class PlayersListComponent {
       default: return 'badge badge-neutral';
     }
   }
-
 }
