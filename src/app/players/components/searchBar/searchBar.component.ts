@@ -5,22 +5,26 @@ import { PodiumListComponent } from '../../components/podium-list/podium-list.co
 
 // services
 import { PlayersService } from '../../services/players.service';
-
+import { PodiumService } from '../../services/podium.service';
 // interfaces
 import { IDNamePlayers } from '../../interfaces/player-info/idName-players.interface';
 import { InfoPlayers } from '../../interfaces/player-info/info-players.interface';
 import { ImgLevel } from '../../interfaces/player-info/img-level-player.interface';
 import { MatchIdList } from '../../interfaces/matchs-info/match-id-.interdace';
 import { MatchInfo } from '../../interfaces/matchs-info/match-info.interface';
+import { PodiumPlayer } from '../../interfaces/player/player.interface';
+
+
 @Component({
   selector: 'search-bar',
   standalone: true,
-  imports: [SearchInputComponent, PlayersListComponent, PodiumListComponent],
+  imports: [SearchInputComponent, PlayersListComponent],
   templateUrl: './searchBar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchBarComponent {
   playersService = inject(PlayersService);
+  podiumService = inject(PodiumService);
 
     isLoading = signal(false);
     isError = signal<string | null>(null);
@@ -29,7 +33,7 @@ export class SearchBarComponent {
     infoPlayer = signal<InfoPlayers[]>([]);
     imgLevelPlayer = signal<ImgLevel | null>(null);
     matchIds = signal<string[]>([]);
-    matchInfo = signal<MatchInfo | null>(null);
+
 
 
 
@@ -71,7 +75,20 @@ export class SearchBarComponent {
 
 
 
+
+
           });
+  }
+
+  onSaveToPodium() {
+    const newPlayer: PodiumPlayer = {
+      idName: this.players()[0],
+      info: this.infoPlayer(),
+      imgLevel: this.imgLevelPlayer()!,
+      matchIds: this.matchIds(),
+    };
+
+    this.podiumService.addPlayer(newPlayer);
   }
 
 

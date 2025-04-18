@@ -9,6 +9,7 @@
             <td>{{ i + 1 }}</td>
             <td>
               <div class="flex items-center gap-2">
+                <!-- Avatar y nivel -->
                 <div class="avatar flex flex-col items-center">
                   <div class="mask mask-squircle h-12 w-12">
                     <img [src]="'https://ddragon.leagueoflegends.com/cdn/14.7.1/img/profileicon/' + imgLevelPlayer()?.profileIconId + '.png'"
@@ -17,24 +18,20 @@
                   </div>
                   <span class="badge badge-sm badge-primary"> {{imgLevelPlayer()?.summonerLevel}}</span>
                 </div>
-                <!-- name player -->
-                <div>
-                  <div class="font-bold">  {{ player.gameName }}#{{ player.tagLine }} </div>
-                  <div class="text-sm opacity-50">El 10 de la calle</div>
-                  <div class="badge badge-neutral badge-sm self-start px-3 py-2 whitespace-nowrap" [ngClass]="getTierBadgeClass()">
-                    <!--tier and rank-->
-                    {{ playerInfo.tier }}
-                    -> {{ playerInfo.rank }}
-                    · LP: {{ playerInfo.leaguePoints }}
+
+                <!-- Nombre y rango -->
+                <div class="flex flex-col gap-2">
+                  <div class="font-bold">{{ player.gameName }}#{{ player.tagLine }}</div>
+
+                  <div class="badge badge-neutral badge-sm px-3 py-2" [ngClass]="getTierBadgeClass()">
+                    {{ playerInfo.tier }} -> {{ playerInfo.rank }} · LP: {{ playerInfo.leaguePoints }}
                   </div>
                 </div>
-                <!-- info player -->
-                <div>
-                  <!--wins and losses-->
-                  <div class="flex flex-col gap-2 opacity-80">
-                    <span class="badge badge-accent whitespace-nowrap">Wins: {{ playerInfo.wins }}</span>
-                    <span class="badge badge-error whitespace-nowrap">Losses: {{ playerInfo.losses }}</span>
-                  </div>
+
+                <!-- Estadísticas -->
+                <div class="flex gap-2">
+                  <span class="badge badge-accent">Wins: {{ playerInfo.wins }}</span>
+                  <span class="badge badge-error">Losses: {{ playerInfo.losses }}</span>
                 </div>
               </div>
             </td>
@@ -44,5 +41,6 @@
     </table>
   </div>
 </section>
+
 
 
