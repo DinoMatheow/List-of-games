@@ -8,7 +8,7 @@ export const routes: Routes = [
   },
  {
   path: 'players',
-  loadChildren: () => import('./players/services/players.routes')
+  loadChildren: () => import('./features/players/services/players.routes')
  },
   {
     path: '**',

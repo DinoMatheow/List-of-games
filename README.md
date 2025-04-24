@@ -1,27 +1,108 @@
-# Lol
+# Estructura del Proyecto Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+## Estructura Actual Mejorada
 
-## Development server
+```
+src/
+├── app/
+│   ├── core/                    # Funcionalidad central de la aplicación
+│   │   ├── guards/             # Guards de autenticación y autorización
+│   │   ├── interceptors/       # Interceptores HTTP
+│   │   ├── services/           # Servicios principales
+│   │   └── models/             # Modelos e interfaces
+│   │
+│   ├── shared/                 # Componentes y funcionalidad compartida
+│   │   ├── components/         # Componentes reutilizables
+│   │   ├── pipes/             # Pipes personalizados
+│   │   ├── directives/        # Directivas personalizadas
+│   │   └── utils/             # Utilidades compartidas
+│   │
+│   ├── features/              # Módulos de características
+│   │   ├── players/          # Módulo de jugadores
+│   │   │   ├── components/   # Componentes específicos de jugadores
+│   │   │   ├── services/     # Servicios de jugadores
+│   │   │   └── models/       # Modelos de jugadores
+│   │   │
+│   │   └── podium-form/      # Módulo de formulario de podio
+│   │       ├── components/   # Componentes del formulario
+│   │       ├── services/     # Servicios del formulario
+│   │       └── models/       # Modelos del formulario
+│   │
+│   ├── environments/         # Configuraciones de entorno
+│   │   ├── environment.ts    # Desarrollo
+│   │   └── environment.prod.ts # Producción
+│   │
+│   ├── assets/              # Recursos estáticos
+│   │   ├── images/         # Imágenes
+│   │   ├── styles/         # Estilos globales
+│   │   └── i18n/           # Archivos de internacionalización
+│   │
+│   ├── app.routes.ts       # Rutas principales
+│   ├── app.config.ts       # Configuración de la aplicación
+│   └── app.component.*     # Componente raíz
+│
+├── index.html
+├── main.ts
+└── styles.css
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Diagrama de Estructura
 
-## Code scaffolding
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                            src/                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────────┐  │
+│  │    core/    │  │   shared/   │  │       features/         │  │
+│  ├─────────────┤  ├─────────────┤  ├─────────────────────────┤  │
+│  │  guards     │  │ components  │  │  players/               │  │
+│  │  services   │  │ pipes       │  │  podium-form/           │  │
+│  │  models     │  │ directives  │  │  ...                    │  │
+│  │  interceptors│  │ utils      │  │                         │  │
+│  └─────────────┘  └─────────────┘  └─────────────────────────┘  │
+│                                                                 │
+│  ┌─────────────┐  ┌─────────────┐                              │
+│  │environments/│  │   assets/   │                              │
+│  ├─────────────┤  ├─────────────┤                              │
+│  │  dev        │  │  images     │                              │
+│  │  prod       │  │  styles     │                              │
+│  └─────────────┘  │  i18n       │                              │
+│                   └─────────────┘                              │
+└─────────────────────────────────────────────────────────────────┘
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Explicación de la Estructura
 
-## Build
+1. **Core**: Contiene la funcionalidad central de la aplicación
+   - Guards para protección de rutas
+   - Interceptores para manejo de peticiones HTTP
+   - Servicios principales
+   - Modelos e interfaces base
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Shared**: Componentes y funcionalidad reutilizable
+   - Componentes comunes
+   - Pipes y directivas
+   - Utilidades compartidas
 
-## Running unit tests
+3. **Features**: Módulos de características específicas
+   - Cada feature tiene su propia estructura completa
+   - Separación clara de responsabilidades
+   - Fácil mantenimiento y escalabilidad
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. **Environments**: Configuraciones por entorno
+   - Desarrollo
+   - Producción
 
-## Running end-to-end tests
+5. **Assets**: Recursos estáticos
+   - Imágenes
+   - Estilos globales
+   - Internacionalización
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Beneficios de esta Estructura
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **Modularidad**: Cada feature es independiente y autocontenido
+- **Escalabilidad**: Fácil de extender con nuevas características
+- **Mantenibilidad**: Código bien organizado y fácil de encontrar
+- **Reutilización**: Componentes compartidos centralizados
+- **Separación de Responsabilidades**: Cada carpeta tiene un propósito claro
