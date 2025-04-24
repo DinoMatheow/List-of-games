@@ -1,27 +1,10 @@
-# Lol
+Project: League of Legends Podium Tracker
+This is a web project developed with Angular (frontend) that connects to the Riot Games API to search for players, add them to a custom list, and generate a dynamic ranking based on their daily, weekly, or monthly performance. The Node.js/NestJS backend is planned and still in development.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+The motivation behind the project came from spending so many hours playing League of Legends with my friends. We always joked about who was the best (or the worst 😅), so I decided to create this app to visualize that in a fun way.
 
-## Development server
+In addition to being a project to pass the time, I'm also using it to improve my technical skills, practice consuming external APIs, and learn more about web application architecture.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The entire system is designed with a sense of humor, so that friends can compete in a healthy way and have even more fun. I hope you like it as much as we enjoy using it! 
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![image](https://github.com/user-attachments/assets/03770650-bf63-4a12-9e40-f346940f57b0)
