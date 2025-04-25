@@ -13,4 +13,4 @@ The entire system is designed with a sense of humor, so that friends can compete
 Here's a better representation of what I want to do and the processes for how this project would work. One thing I'd like to add, but I'm still hesitant about, is creating a form so you can create nicknames for players you get in the search, so you can use the nicknames we all have with friends and such.
 
 ![image](https://github.com/user-attachments/assets/ef3c4c12-b658-4d70-8113-9f084d4e321f)
->>>>>>> ec5a0270219b9efca27ffb5d015860204c960a6b
+
