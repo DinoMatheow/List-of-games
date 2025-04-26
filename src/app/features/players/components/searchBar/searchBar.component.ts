@@ -13,12 +13,12 @@ import { ImgLevel } from '../../interfaces/player-info/img-level-player.interfac
 import { MatchIdList } from '../../interfaces/matchs-info/match-id-.interdace';
 import { MatchInfo } from '../../interfaces/matchs-info/match-info.interface';
 import { PodiumPlayer } from '../../interfaces/player/player.interface';
-
+import { LoadingComponent } from '../../../../shared/components/loading/loading.component';
 
 @Component({
   selector: 'search-bar',
   standalone: true,
-  imports: [SearchInputComponent, PlayersListComponent],
+  imports: [SearchInputComponent, PlayersListComponent, LoadingComponent],
   templateUrl: './searchBar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

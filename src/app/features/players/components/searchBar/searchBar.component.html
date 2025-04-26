@@ -2,23 +2,22 @@
   <search-input (value)="onSearch($event)"></search-input>
 
   @if (isLoading()) {
-    <div class="flex justify-center items-center h-64">
-      <span class="loading loading-spinner loading-lg"></span>
-    </div>
+    <app-loading size="lg" [showText]="true"></app-loading>
   } @else {
-    <players-list
-      [players]="players()"
-      [infoPlayer]="infoPlayer()"
-      [imgLevelPlayer]="imgLevelPlayer() ?? undefined">
-    </players-list>
+    @defer (when players().length > 0) {
+      <players-list
+        [players]="players()"
+        [infoPlayer]="infoPlayer()"
+        [imgLevelPlayer]="imgLevelPlayer() ?? undefined">
+      </players-list>
 
-
-
-    <button class="btn btn-primary" (click)="onSaveToPodium()">Save to list</button>
-
+      <button class="btn btn-primary" (click)="onSaveToPodium()">Save to list</button>
+    } @loading (after 100ms; minimum 500ms) {
+      <app-loading size="lg" [showText]="true"></app-loading>
+    } @placeholder {
+      <div class="text-center text-gray-500 p-4">
+        Ingresa un nombre de jugador para buscar
+      </div>
+    }
   }
-
-
 </div>
-
-
