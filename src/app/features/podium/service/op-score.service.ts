@@ -1,12 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { PlayersService } from './players.service';
-import { MatchInfo } from '../interfaces/matchs-info/match-info.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OPScoreService {
-  constructor(private playersService: PlayersService) {}
+  private playersService = inject(PlayersService);
 
   // Método para calcular el OP_Score de un jugador
   async calculateOPScore(puuid: string, summonerName: string) {
