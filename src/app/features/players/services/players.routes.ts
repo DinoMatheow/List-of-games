@@ -12,7 +12,7 @@ export const playersRoutes: Routes = [
     children: [
       {
         path: 'home-menu',
-        component: IdPageComponent,
+        component: PodiumComponent,
       },
       {
         path: 'by-deaths',

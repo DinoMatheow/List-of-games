@@ -18,7 +18,7 @@ const API_URL_INFO_MATCH = 'https://americas.api.riotgames.com/lol/match/v5';
 })
 export class PlayersService {
   private http = inject(HttpClient);
-  private API_KEY = 'RGAPI-a1d46a68-618f-4e2e-85ca-2c6aac58a6c0';
+  private API_KEY = 'RGAPI-843df658-3f50-476f-b070-c46e0cf71575';
   private players: { puuid: string; summonerName: string }[] = [];
 
   searchPlayers(query: string) {
