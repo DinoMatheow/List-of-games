@@ -1,0 +1,174 @@
+[33mcommit a7c81178c1823b59473f3851a1ec229aab18449f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mgh-pages[m[33m, [m[1;31morigin/gh-pages[m[33m)[m
+Author: Matheow <95660245+DinoMatheow@users.noreply.github.com>
+Date:   Sat May 31 20:56:25 2025 -0500
+
+    Actualización del sitio con nuevo nombre
+
+[33mcommit d5997181f8d8fa0e9685dc15b2442b5ed59262a2[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Matheow <95660245+DinoMatheow@users.noreply.github.com>
+Date:   Tue May 13 12:19:52 2025 -0500
+
+    config
+
+[33mcommit bcb1e5f6b2d5dd46cd9750fa4bcb27ac740df306[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Wed Apr 30 12:49:25 2025 -0500
+
+    ranking service and op-so
+
+[33mcommit 3c5e95cd67bd1fab8216f14a1d1d541dec8f78cb[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Tue Apr 29 19:58:06 2025 -0500
+
+    new service-sort-podium
+
+[33mcommit 7001969e5065b88f33906c17ba6c56f540495246[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Fri Apr 25 19:45:38 2025 -0500
+
+    new metod
+
+[33mcommit 8cc33e78cf68fee90085cf9f6635c7a8750203a1[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Fri Apr 25 19:43:47 2025 -0500
+
+    new metod
+
+[33mcommit a7b6ceee2cff320f13ff44060418591f82ec871c[m
+Author: Matheow <95660245+DinoMatheow@users.noreply.github.com>
+Date:   Thu Apr 24 23:48:51 2025 -0500
+
+    Update README.md
+
+[33mcommit 170a63092d1f674caa702d1497e65667b3b1b8b1[m
+Author: Matheow <95660245+DinoMatheow@users.noreply.github.com>
+Date:   Thu Apr 24 23:47:54 2025 -0500
+
+    Update README.md
+
+[33mcommit bf109bea78166d967975da98afde466a0db05927[m
+Merge: 6d1d6e2 ec5a027
+Author: Matheow <matius152014@gmail.com>
+Date:   Thu Apr 24 11:23:47 2025 -0500
+
+    pipes update
+
+[33mcommit 6d1d6e269b33cbef1146b42ac2efbf5dbc58fca4[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Thu Apr 24 11:21:51 2025 -0500
+
+    pipes update
+
+[33mcommit ec5a0270219b9efca27ffb5d015860204c960a6b[m
+Author: Matheow <95660245+DinoMatheow@users.noreply.github.com>
+Date:   Thu Apr 24 09:07:17 2025 -0500
+
+    Update README.md
+
+[33mcommit bf7922b70074ec8f30c4bd1efaedc90f205b397a[m
+Author: Matheow <95660245+DinoMatheow@users.noreply.github.com>
+Date:   Thu Apr 24 01:51:07 2025 -0500
+
+    Update README.md
+
+[33mcommit 823e9975dd7e3c5a79d9851b1cffc29bc5506720[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Fri Apr 18 18:53:44 2025 -0500
+
+    mejoras visuales
+
+[33mcommit f229ffd56f669b1e9229fb4762b45dfd2f559406[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Wed Apr 16 19:48:37 2025 -0500
+
+    update apis
+
+[33mcommit 1ccec2307038c43caf0cd576b7f73f5540c04171[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Tue Apr 15 21:38:37 2025 -0500
+
+    forms in proyect
+
+[33mcommit fe108a5dd93f9dba3fad818a58044c69b41f82a7[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Mon Apr 14 20:50:02 2025 -0500
+
+    mejora en player list
+
+[33mcommit 31c17a05faf0126f3e90f507d0cc3e71c9a99a9d[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Sat Apr 12 10:11:51 2025 -0500
+
+    path update
+
+[33mcommit f957b80e8ad8ded7ec714214a7b749b555226cd4[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Fri Apr 11 20:31:17 2025 -0500
+
+    composition update
+
+[33mcommit 632b806e2502d6be28e27f271a1603ac12bce4da[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Fri Apr 11 19:02:42 2025 -0500
+
+    playlist update
+
+[33mcommit 846aa12c3aaf97527a08c1b019cab01fce363f9f[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Fri Apr 11 17:43:54 2025 -0500
+
+    interface update
+
+[33mcommit 0d0a429d358a3d4dc7f5380627dae5a8d58b3aad[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Fri Apr 11 17:04:50 2025 -0500
+
+    update search
+
+[33mcommit 0f82f2015eab4c01258c790442479fc180d35fc0[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Wed Apr 9 10:26:43 2025 -0500
+
+    languaje button
+
+[33mcommit b2a787132ed62abfd100c815883691d880ad7a27[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Tue Apr 8 21:17:12 2025 -0500
+
+    user interface
+
+[33mcommit d7fad1e3f2ca1874675a4563edd38797d6f40ca8[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Tue Apr 8 17:35:35 2025 -0500
+
+    carga de img
+
+[33mcommit b312a7a7e232e1eff08b218b2a44108ea41c9e77[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Tue Apr 8 16:14:54 2025 -0500
+
+    reload
+
+[33mcommit d9ff9454976e3fa3ed03b02f505f4e637a7b7908[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Fri Apr 4 15:47:42 2025 -0500
+
+    60% apis
+
+[33mcommit 4dc05f204a2a28ac22d5e1d0095fadb382225c05[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Thu Apr 3 18:03:41 2025 -0500
+
+    apis 50%
+
+[33mcommit 890cf35175f537fa1e934289acdd83f801f2bac8[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Thu Apr 3 13:13:19 2025 -0500
+
+    Apis 20%
+
+[33mcommit e2dd7e7f92299fcf2aa4de128ce1694c8ec7bf99[m
+Author: Matheow <matius152014@gmail.com>
+Date:   Fri Mar 28 21:53:39 2025 -0500
+
+    Primer commit
